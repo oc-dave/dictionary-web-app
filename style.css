@@ -1,0 +1,107 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  background: linear-gradient(15deg, #ffffff, #bbd2ff);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.info-text {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin: 20px 0;
+  color: #1d4ed8;
+}
+
+.meaning,
+.example,
+.synonyms {
+  margin: 15px 0;
+  color: #555;
+}
+
+.synonyms .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search span {
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.search span:hover {
+  color: #1d4ed8;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid transparent;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+
+.book-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  animation: book-open 1.5s linear infinite;
+}
+
+.book-loader span {
+  display: block;
+  width: 10px;
+  height: 20px;
+  background-color: #3b82f6;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+@keyframes book-open {
+  0%,
+  100% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary App</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <div class="wrapper">
+    <input type="text" class="border w-full p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="Search for a word..." />
+    <div class="info-text">Type any existing word and press enter to get meaning, example, synonyms, etc.</div>
+    <div class="loader hidden">
+      <div class="book-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="word hidden">
+      <p class="font-bold text-xl"></p>
+      <span class="italic text-gray-500"></span>
+      <i class="fas fa-volume-up cursor-pointer"></i>
+    </div>
+
+    <div class="meanings"></div>
+
+    <div class="synonyms hidden">
+      <h3 class="font-semibold">Synonyms:</h3>
+      <div class="list flex flex-wrap gap-2"></div>
+    </div>
+
+    <div class="search mt-5">
+      <span>&times; Clear</span>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
